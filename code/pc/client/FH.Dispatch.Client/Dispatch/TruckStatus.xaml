@@ -1,0 +1,8 @@
+﻿<Window x:Class="FH.Dispatch.Client.Dispatch.TruckStatus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="叉车运行监控" Height="500" Width="800">
+    <Grid>
+        
+    </Grid>
+</Window>

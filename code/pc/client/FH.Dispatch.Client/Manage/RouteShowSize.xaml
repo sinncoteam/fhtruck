@@ -1,0 +1,14 @@
+﻿<Window x:Class="FH.Dispatch.Client.Manage.RouteShowSize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="设置缩放倍数" Height="300" Width="600" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="缩放：" Height="28" HorizontalAlignment="Left" Margin="60,30,0,0" Name="lb1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="136,30,0,0" Name="tb_psize" VerticalAlignment="Top" Width="317" />
+        <Label Content="左右：" Height="28" HorizontalAlignment="Left" Margin="60,60,0,0" Name="lb21" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="136,60,0,0" Name="tb_left" VerticalAlignment="Top" Width="317" />
+        <Label Content="上下：" Height="28" HorizontalAlignment="Left" Margin="60,90,0,0" Name="lb3" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="136,90,0,0" Name="tb_up" VerticalAlignment="Top" Width="317" />
+        <Button Content="保  存" Height="23" HorizontalAlignment="Left" Margin="136,128,0,0" Name="btn_save" Style="{StaticResource css_btn}" VerticalAlignment="Top" Width="146" Click="btn_save_Click" />
+    </Grid>
+</Window>

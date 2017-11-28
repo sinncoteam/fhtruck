@@ -1,0 +1,52 @@
+﻿<Window xmlns:my="clr-namespace:FH.Dispatch.Client.Controls"  x:Class="FH.Dispatch.Client.Manage.RouteIndex"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RF路径管理" Height="680" Width="1000" Loaded="Window_Loaded" Closing="Window_Closing" WindowStartupLocation="CenterScreen" >
+   
+
+    <Grid> 
+        <my:TopMenu x:Name="my_topmenu" VerticalAlignment="Top" Margin="0,0,0,0" Width="auto" ></my:TopMenu>
+        <DataGrid AutoGenerateColumns="False" Height="530" HorizontalAlignment="Left" CanUserAddRows="False" Margin="20,70,20,0" Name="dataGrid1" VerticalAlignment="Top" Width="auto" CellEditEnding="dataGrid1_CellEditEnding" BeginningEdit="dataGrid1_BeginningEdit" Style="{StaticResource css_dg}">
+            <DataGrid.Columns>
+                <!--<DataGridCheckBoxColumn Header="选择" Width="1*"  Binding="{Binding IsChecked, Mode=TwoWay}" x:Name="c_id"></DataGridCheckBoxColumn>-->
+                <DataGridTemplateColumn Header="选择" Width="2*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" x:Name="c_id" Tag="{Binding Id}" Click="c_id_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="编码" Width="2*" Binding="{Binding Routecode}" />
+                <DataGridTextColumn Header="起点" Width="2*" Binding="{Binding Isstart}"/>
+                <DataGridTextColumn Header="岔路" Width="2*" Binding="{Binding Routewaycount}"/>
+                <DataGridTextColumn Header="前" Width="2*" Binding="{Binding Nextroutecode}"/>
+                <DataGridTextColumn Header="值" Width="2*" Binding="{Binding Nextroutevalue}"/>
+                <DataGridTextColumn Header="左" Width="2*" Binding="{Binding Leftroutecode}"/>
+                <DataGridTextColumn Header="值" Width="2*" Binding="{Binding Leftroutevalue}"/>
+                <DataGridTextColumn Header="右" Width="2*" Binding="{Binding Rightroutecode}"/>
+                <DataGridTextColumn Header="值" Width="2*" Binding="{Binding Rightroutevalue}"/>
+                <DataGridTextColumn Header="后" Width="2*" Binding="{Binding Backroutecode}"/>
+                <DataGridTextColumn Header="值" Width="2*" Binding="{Binding Backroutevalue}"/>
+                <DataGridTextColumn Header="X" Width="2*" Binding="{Binding X}"/>
+                <DataGridTextColumn Header="Y" Width="2*" Binding="{Binding Y}"/>
+                <DataGridTextColumn Header="是否有效" Width="2*"  Binding="{Binding IsValidName}"/>
+                <DataGridTemplateColumn  Width="2*" Header="备注"   >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="无" TextAlignment="Center"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <my:Pager PageChanged="dataPager1_PageChanged" PageChanging="dataPager1_PageChanging"   PageSize="20"   x:Name="dataPager1" VerticalAlignment="Top" Margin="20,605,20,0" />
+        <Button Content="新建RF节点" Style="{StaticResource css_btn}" Height="23" Margin="0,42,141,0" Name="btn_newroute" VerticalAlignment="Top" Click="btn_newroute_Click" HorizontalAlignment="Right" Width="97" />
+        <Button Content="刷 新" Height="23" HorizontalAlignment="Right" Margin="0,42,20,0" Name="button1" VerticalAlignment="Top" Width="97" Click="button1_Click" />
+        <Button Content="设为有效" Style="{StaticResource css_btn}" Height="23" HorizontalAlignment="Left" Margin="83,42,0,0" Name="btn_isvalid" VerticalAlignment="Top" Width="97" Click="btn_isvalid_Click" />
+        <Button Content="删除" Style="{StaticResource css_btn}" Height="23" HorizontalAlignment="Left" Margin="203,42,0,0" Name="btn_del" VerticalAlignment="Top" Width="97" Click="btn_del_Click" />
+        <CheckBox Content="全选" Height="16" HorizontalAlignment="Left" Margin="20,47,0,0" Name="chk_all" VerticalAlignment="Top" Unchecked="chk_all_Unchecked" Checked="chk_all_Checked" />
+        <Button Content="查 看" Style="{StaticResource css_btn}" Height="23" HorizontalAlignment="Right" Margin="0,42,261,0" Name="btn_showpath" VerticalAlignment="Top" Width="97" Click="btn_showpath_Click"  />
+    </Grid>
+</Window>

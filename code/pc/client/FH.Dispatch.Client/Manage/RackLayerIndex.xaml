@@ -1,0 +1,32 @@
+﻿<Window x:Class="FH.Dispatch.Client.Manage.RackLayerIndex" xmlns:my="clr-namespace:FH.Dispatch.Client.Controls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="仓位层位管理" Height="680" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <my:TopMenu x:Name="my_topmenu" VerticalAlignment="Top" ></my:TopMenu>
+        <CheckBox Content="全选" Height="16" HorizontalAlignment="Left" Margin="20,47,0,0" Name="chk_all" VerticalAlignment="Top" Unchecked="chk_all_Unchecked" Checked="chk_all_Checked" />
+        <Button Content="设为有效" Height="23" HorizontalAlignment="Left" Margin="83,42,0,0" Name="btn_isvalid" VerticalAlignment="Top" Width="97" Click="btn_isvalid_Click" Style="{StaticResource css_btn}"/>
+        <Button Content="删除" Height="23" HorizontalAlignment="Left" Margin="203,42,0,0" Name="btn_del" VerticalAlignment="Top" Width="97" Click="btn_del_Click" Style="{StaticResource css_btn}"/>
+        <Button Content="新建层位" Height="23" Margin="0,41,20,0" Name="btn_newtruck" VerticalAlignment="Top" Click="btn_newtruck_Click" HorizontalAlignment="Right" Width="135" Style="{StaticResource css_btn}"/>
+        <DataGrid AutoGenerateColumns="False" Height="530" HorizontalAlignment="Left" CanUserAddRows="False" Margin="20,70,20,0" Name="dataGrid1" VerticalAlignment="Top" Style="{StaticResource css_dg}" CellEditEnding="dataGrid1_CellEditEnding" BeginningEdit="dataGrid1_BeginningEdit">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="选择" Width="2*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" x:Name="c_id" Tag="{Binding ID}" Click="c_id_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="编号" Width="2*" Binding="{Binding RackLayerCode}" />
+                <DataGridTextColumn Header="所在仓位" Width="2*" Binding="{Binding RackCode}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="所在层位" Width="2*" Binding="{Binding RackLayerNum}"  />
+                <DataGridTextColumn Header="状态" Width="2*" Binding="{Binding RackStatusName}" IsReadOnly="True" />
+                <DataGridTextColumn Header="货物条码" Width="2*" Binding="{Binding PackageCode}" IsReadOnly="True" />
+                <DataGridTextColumn Header="外部编号" Width="2*" Binding="{Binding OutRackLayerCode}" IsReadOnly="True" />
+                <DataGridTextColumn Header="创建时间" Width="3*"  Binding="{Binding Createtime}" IsReadOnly="True" />
+                <DataGridTextColumn Header="是否有效" Width="2*"  Binding="{Binding IsValidName}" IsReadOnly="True" />   
+            </DataGrid.Columns>
+        </DataGrid>
+        <my:Pager PageChanged="dataPager1_PageChanged"  PageSize="20"   x:Name="dataPager1" VerticalAlignment="Top" Margin="20,605,20,0" />
+    </Grid>
+</Window>

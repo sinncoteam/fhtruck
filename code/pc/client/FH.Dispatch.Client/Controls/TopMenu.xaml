@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="FH.Dispatch.Client.Controls.TopMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" x:Name="x_topmenu"
+             d:DesignHeight="30" >
+    <StackPanel Height="30" Background="#ddd"  >
+        <Menu  HorizontalAlignment="Left"  Background="#ddd" VerticalContentAlignment="Center" Margin="0,0,0,0" Name="menu1" VerticalAlignment="Top"  FontSize="14">
+            <MenuItem Header="文件" Margin="10,5,0,5">
+                <MenuItem Header="打开" />
+                <MenuItem Header="退出" x:Name="mi_exit" Click="mi_exit_Click" />
+            </MenuItem>
+            <MenuItem Header="数据" Margin="10,5,5,5">
+                <MenuItem Header="路径管理" x:Name="mi_route" Click="mi_route_Click" />
+                <MenuItem Header="叉车管理" x:Name="mi_truck" Click="mi_truck_Click" />
+                <MenuItem Header="仓位管理" x:Name="mi_rack" Click="mi_rack_Click"/>
+                <MenuItem Header="日志管理" x:Name="mi_log" Click="mi_log_Click"/>
+            </MenuItem>
+            <MenuItem Header="调度"  Margin="0,5,10,5">
+                <MenuItem Header="调度演示" Click="mi_dispath_Click" x:Name="mi_dispath" />
+                <MenuItem Header="查看路径" Click="mi_showroute_Click" x:Name="mi_showroute" />
+                <MenuItem Header="设置缩放" Click="mi_showroutesize_Click" x:Name="mi_showroutesize" />
+                <MenuItem Header="关闭端口" Click="mi_closesp_Click" x:Name="mi_closesp"></MenuItem>
+                <MenuItem Header="打开端口" Click="mi_opensp_Click" x:Name="mi_opensp"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="选项"  Margin="0,5,10,5"/>
+            <MenuItem Header="帮助" Margin="0,5,10,5"/>
+        </Menu>
+    </StackPanel>
+</UserControl>

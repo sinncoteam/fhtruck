@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="FH.Dispatch.Client.Controls.FootBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" >
+    <Grid>
+        <StackPanel Height="30" Background="#ddd"  >
+            <StatusBar Height="30" Name="sbar_foot">
+                <StatusBarItem Name="x_sbitem" Padding="10,3,0,0" />
+            </StatusBar>
+        </StackPanel>
+    </Grid>
+</UserControl>

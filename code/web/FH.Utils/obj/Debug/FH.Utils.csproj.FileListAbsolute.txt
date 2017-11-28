@@ -1,0 +1,4 @@
+E:\fenghai\svn\code\web\FH.Utils\bin\Debug\FH.Utils.dll
+E:\fenghai\svn\code\web\FH.Utils\bin\Debug\FH.Utils.pdb
+E:\fenghai\svn\code\web\FH.Utils\obj\Debug\FH.Utils.dll
+E:\fenghai\svn\code\web\FH.Utils\obj\Debug\FH.Utils.pdb

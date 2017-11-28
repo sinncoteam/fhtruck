@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C404DC6-F23F-4F31-95D7-9ADA470204D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FH.Dispatch.Domain</RootNamespace>
+    <AssemblyName>FH.Dispatch.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ViCore">
+      <HintPath>..\..\lib\ViCore.dll</HintPath>
+    </Reference>
+    <Reference Include="ViData">
+      <HintPath>..\..\lib\ViData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Info\CenterRouteInfo.cs" />
+    <Compile Include="Info\DispatchInfo.cs" />
+    <Compile Include="Info\InstructionInfo.cs" />
+    <Compile Include="Info\InstructionLogInfo.cs" />
+    <Compile Include="Info\OperatorInfo.cs" />
+    <Compile Include="Info\RackInfo.cs" />
+    <Compile Include="Info\RackLayerInfo.cs" />
+    <Compile Include="Info\RouteInfo.cs" />
+    <Compile Include="Info\TruckInfo.cs" />
+    <Compile Include="Info\TruckLogInfo.cs" />
+    <Compile Include="Model\Dispath.cs" />
+    <Compile Include="Model\DispathMap.cs" />
+    <Compile Include="Model\InstructionLog.cs" />
+    <Compile Include="Model\InstructionLogMap.cs" />
+    <Compile Include="Model\LKHRack.cs" />
+    <Compile Include="Model\LKHRackMap.cs" />
+    <Compile Include="Model\Operator.cs" />
+    <Compile Include="Model\OperatorMap.cs" />
+    <Compile Include="Model\Rack.cs" />
+    <Compile Include="Model\RackLayer.cs" />
+    <Compile Include="Model\RackLayerMap.cs" />
+    <Compile Include="Model\RackMap.cs" />
+    <Compile Include="Model\Route.cs" />
+    <Compile Include="Model\RouteMap.cs" />
+    <Compile Include="Model\Truck.cs" />
+    <Compile Include="Model\TruckLog.cs" />
+    <Compile Include="Model\TruckLogMap.cs" />
+    <Compile Include="Model\TruckMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\DispathService.cs" />
+    <Compile Include="Service\InstructionLogService.cs" />
+    <Compile Include="Service\LKHRackService.cs" />
+    <Compile Include="Service\OperatorService.cs" />
+    <Compile Include="Service\RackLayerService.cs" />
+    <Compile Include="Service\RackService.cs" />
+    <Compile Include="Service\RouteService.cs" />
+    <Compile Include="Service\TruckLogService.cs" />
+    <Compile Include="Service\TruckService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\FH.Common.Utils\FH.Common.Utils.csproj">
+      <Project>{4962B220-F077-416B-A417-07F679B1F3AC}</Project>
+      <Name>FH.Common.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

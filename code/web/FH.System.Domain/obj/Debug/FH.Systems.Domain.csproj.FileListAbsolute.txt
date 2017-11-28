@@ -1,0 +1,16 @@
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\FH.Systems.Domain.dll
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\FH.Systems.Domain.pdb
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\log4net.dll
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\ViCore.dll
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\ViData.dll
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\Memcached.ClientLibrary.dll
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\Microsoft.Practices.Unity.dll
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\Microsoft.Practices.Unity.pdb
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+E:\fenghai\svn\code\web\FH.System.Domain\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+E:\fenghai\svn\code\web\FH.System.Domain\obj\Debug\FH.Systems.Domain.dll
+E:\fenghai\svn\code\web\FH.System.Domain\obj\Debug\FH.Systems.Domain.pdb
+E:\fenghai\svn\code\web\FH.System.Domain\obj\Debug\FH.Systems.Domain.csprojResolveAssemblyReference.cache

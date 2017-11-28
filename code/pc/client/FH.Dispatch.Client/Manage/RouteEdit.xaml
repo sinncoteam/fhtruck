@@ -1,0 +1,31 @@
+﻿<Window x:Class="FH.Dispatch.Client.Manage.RouteEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="编辑RF路径点信息" Height="250" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Style="{StaticResource css_window}"  >
+    <Grid>
+        
+        <Label Content="RF编码：" Height="28" HorizontalAlignment="Left" Margin="45,56,0,0" Name="label1" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="101,56,0,0" Name="tb_routecode" VerticalAlignment="Top" Width="66" VerticalContentAlignment="Center"/>
+        <Label Content="前节点：" Height="28" HorizontalAlignment="Left" Margin="186,56,0,0" Name="label2" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="243,56,0,0" Name="tb_next" VerticalAlignment="Top" Width="66" VerticalContentAlignment="Center"/>
+        <Label Content="左节点：" Height="28" HorizontalAlignment="Left" Margin="331,56,0,0" Name="label3" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="388,56,0,0" Name="tb_left" VerticalAlignment="Top" Width="66" VerticalContentAlignment="Center"/>
+        <Label Content="右节点：" Height="28" HorizontalAlignment="Left" Margin="476,56,0,0" Name="label4" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" Margin="533,56,0,0" Name="tb_right" VerticalAlignment="Top" HorizontalAlignment="Left" Width="66" VerticalContentAlignment="Center"/>
+        <Label Content="后节点：" Height="28" HorizontalAlignment="Left" Margin="617,56,0,0" Name="label5" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" Margin="674,56,0,0" Name="tb_back" VerticalAlignment="Top" HorizontalAlignment="Left" Width="66" VerticalContentAlignment="Center" />
+        <Label Content="权    值：" Height="28" HorizontalAlignment="Left" Margin="186,90,0,0" Name="label6" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="243,90,0,0" Name="tb_next_value" VerticalAlignment="Top" Width="66" VerticalContentAlignment="Center"   />
+        <Label Content="权    值：" Height="28" HorizontalAlignment="Left" Margin="331,90,0,0" Name="label7" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="388,90,0,0" Name="tb_left_value" VerticalAlignment="Top" Width="66" VerticalContentAlignment="Center" />
+        <Label Content="权    值：" Height="28" HorizontalAlignment="Left" Margin="476,90,0,0" Name="label8" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="533,90,0,0" Name="tb_right_value" VerticalAlignment="Top" Width="66" VerticalContentAlignment="Center" />
+        <Label Content="权    值：" Height="28" HorizontalAlignment="Left" Margin="617,90,0,0" Name="label9" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="674,90,0,0" Name="tb_back_value" VerticalAlignment="Top" Width="66" VerticalContentAlignment="Center" />
+        <Button Content="保  存" Height="28" HorizontalAlignment="Left" Margin="533,172,0,0" Name="btn_confirm" VerticalAlignment="Top" Width="207" Click="btn_confirm_Click" Style="{StaticResource css_btn}"/>
+        <Label Content="X 坐 标：" Height="28" HorizontalAlignment="Left" Margin="186,132,0,0" Name="label10" VerticalAlignment="Top" Width="71" />
+        <Label Content="Y 坐 标：" Height="28" HorizontalAlignment="Left" Margin="331,132,0,0" Name="label11" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="243,132,0,0" Name="tb_x" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="66" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="388,132,0,0" Name="tb_y" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="66" />
+    </Grid>
+</Window>
